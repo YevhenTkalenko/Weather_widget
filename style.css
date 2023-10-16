@@ -1,62 +1,64 @@
 * {
     box-sizing: border-box;
 }
-.main_section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.weather_card {
-    width: 200px;
-    border: 2px solid rgba(68, 158, 68, 0.841);
-    border-radius: 5%;
-    text-align: center;
-    background-color: rgb(198, 255, 198);
+@media(max-width:767px) {
+    .main_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
     
-}
-
-.weather_card p {
-    margin: 0;
-}
-
-.weather_city {
-    color: rgba(68, 158, 68, 0.841);
-    font-weight: bold;
-    padding-top: 20px;
-}
-
-.weather_temp {
-    font-size: 25px;
-}
-
-.weather_description::first-letter {
-    text-transform: capitalize;
-}
-
-.btn_onclick_weather {
-    width: 100%;
-    text-align: center;
-}
-
-.weather_btn {
-    width: 45%;
-    height: 35px;
-    border-radius: 10%;
-    border: none;
-    background-color: rgba(68, 158, 68, 0.841);
-    color: white;
-    margin-bottom: 20px;
-}
-
-hr {
-    width: 45%;
-}
-
-a {
-    color: white;
-    text-decoration: none;
+    .weather_card {
+        width: 200px;
+        border: 2px solid rgba(68, 158, 68, 0.841);
+        border-radius: 5%;
+        text-align: center;
+        background-color: rgb(198, 255, 198);
+        
+    }
+    
+    .weather_card p {
+        margin: 0;
+    }
+    
+    .weather_city {
+        color: rgba(68, 158, 68, 0.841);
+        font-weight: bold;
+        padding-top: 20px;
+    }
+    
+    .weather_temp {
+        font-size: 25px;
+    }
+    
+    .weather_description::first-letter {
+        text-transform: capitalize;
+    }
+    
+    .btn_onclick_weather {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .weather_btn {
+        width: 45%;
+        height: 35px;
+        border-radius: 10%;
+        border: none;
+        background-color: rgba(68, 158, 68, 0.841);
+        color: white;
+        margin-bottom: 20px;
+    }
+    
+    hr {
+        width: 45%;
+    }
+    
+    a {
+        color: white;
+        text-decoration: none;
+    }
 }
 
 
