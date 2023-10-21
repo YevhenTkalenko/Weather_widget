@@ -9,10 +9,14 @@
 }
 
 .weather_card {
-    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 75vw;
+    height: 75vh;
     border: 2px solid rgba(68, 158, 68, 0.841);
     border-radius: 5%;
-    text-align: center;
     background-color: rgb(198, 255, 198);
     
 }
@@ -24,43 +28,63 @@
 .weather_city {
     color: rgba(68, 158, 68, 0.841);
     font-weight: bold;
-    padding-top: 20px;
+    word-wrap: normal;
+    text-align: center;
+    position: relative;
 }
 
+/* .weather_city::after , .weather_description::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 1px;
+    width: 100%;
+    background-color: grey;
+} */
+
+.weather_city, 
 .weather_temp {
+    font-size: 40px;
+}
+
+.weather_description {
     font-size: 25px;
+    position: relative;
 }
 
 .weather_description::first-letter {
     text-transform: capitalize;
 }
 
-.btn_onclick_weather {
-    width: 100%;
-    text-align: center;
-}
-
 .weather_btn {
-    width: 45%;
-    height: 35px;
     border-radius: 10%;
     border: none;
     background-color: rgba(68, 158, 68, 0.841);
-    color: white;
     margin-bottom: 20px;
 }
 
-hr {
-    width: 45%;
-}
-
-a {
+.weather_btn > a {
     color: white;
     text-decoration: none;
+    display: block;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+}
+
+hr {
+    width: 100%;
+}
+
+.weather_icon > img {
+    width: 9.5em;
+    height: 9.5em;
 }
 
 
-@media (min-width: 768px) and (max-width: 1023px) {
+
+/* @media (min-width: 768px) and (max-width: 1023px) {
     .weather_card {
         min-width: 40vw;
         max-width: 55vh;
@@ -104,4 +128,4 @@ a {
         margin: 0 0 0 30px
     }
 
-}
+} */
