@@ -63,6 +63,8 @@
     border: none;
     background-color: rgba(68, 158, 68, 0.841);
     margin-bottom: 20px;
+    width: 100px;
+    height: 40px;
 }
 
 .weather_btn > a {
