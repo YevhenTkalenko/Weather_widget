@@ -11,22 +11,19 @@
 <body>
     <main class="main_section">
         <div class="weather_card">
-            <p class="weather_city">Choose city
-                <hr>
-            </p>
-            <p class="weather_temp">
-            </p>
-            <p class="weather_description"></p>
-            <hr>
-            <p class="weather_icon"></p>
-            <div class="btn_onclick_weather">
-                <button class="wiki_btn">
-                    <a target="_blank">Wiki</a>
+            <section class="serch_section">
+                <input type="text" class="search_input" placeholder="Enter your city">
+                <button class="search_btn">
+                    <img src="/img/icons8-search.svg" alt="searc">
                 </button>
-                <button class="weather_btn">
-                    <a target="_blank">Reset</a>
-                </button>
-            </div>
+            </section>
+            <section class="weather-info">
+                <h1 class="weather_city"></h1>
+                <h2 class="weather_temp">
+                </h2>
+                <p class="weather_description"></p>
+                <div class="weather_icon"></div>
+            </section>
         </div>
     </main>
     <script type="module" src="script.js"></script>
