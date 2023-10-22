@@ -11,9 +11,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 78vw;
-    height: 95vh;
     border-radius: 5%;
     color: white;
     background: linear-gradient(29deg, rgba(11,2,163,1) 19%, rgba(17,144,215,1) 81%)
@@ -26,6 +25,8 @@
    justify-content: center;
    width: 100%;
    border-radius: 10px;
+   margin-top: 30px;
+   margin-bottom: 30px;
 }
 
 .search_input {
@@ -57,18 +58,27 @@
 /*Finish search section*/
 
 /*Start weather information*/
+.error_data {
+    font-size: 25px;
+    color: rgb(244, 78, 78);
+    display: none;
+}
+
 .weather-info {
     width: 100%;
     text-align: center;
+    margin-bottom: 60px;
+    display: none;
 }
 
 .weather-info h1{
     font-size: 45px;
-    margin-top: 0px;
+    margin: 0;
 }
 
 .weather-info h2 {
     font-size: 35px;
+    margin-top: 10px;
 }
 
 .weather_description {
@@ -82,7 +92,34 @@
 .weather_icon > img {
     width: 8.5em;
     height: 8.5em;
-} 
+}
+
+.weather_img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather_img img {
+    height: 3em;
+    width: 3em;
+    margin-left: 10px;
+}
+
+.weather_img div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather_img p {
+    width: 100%;
+    margin: 0;
+}
+
+.wind_speed, .humidity {
+    font-size: 20px;
+}
 
 /*Finish weather information*/
 
