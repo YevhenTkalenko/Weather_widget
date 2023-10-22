@@ -27,8 +27,6 @@ async function insertWeatherData(weatherdata) {
     }
 }
 
-
-
 searchCityBtn.addEventListener("click", () => {
     getFetch(inputCityName.value)
 })
