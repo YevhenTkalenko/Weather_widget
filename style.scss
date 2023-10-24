@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+/*Cart and main styles*/
+
+@media (min-width: 200px) {
+  .main_section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .weather_card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 78vw;
+      color: white;
+      background: linear-gradient(
+        29deg,
+        rgba(11, 2, 163, 1) 19%,
+        rgba(17, 144, 215, 1) 81%
+      );
+    }
+  }
+
+  /*Start search section*/
+  .serch_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .serch_section img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .search_input {
+      height: 35px;
+      font-size: 16px;
+      border-radius: 10px;
+      width: 60%;
+
+      &::placeholder {
+        opacity: 50%;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .search_btn {
+      background: none;
+      outline: none;
+      border: none;
+    }
+  }
+  /*Finish search section*/
+
+  /*Start weather information*/
+  .error_data {
+    font-size: 25px;
+    display: none;
+  }
+
+  .weather-info {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+    display: none;
+
+    & h1 {
+      font-size: 45px;
+      margin: 0;
+    }
+    & h2 {
+      font-size: 35px;
+      margin-top: 10px;
+    }
+
+    .weather_description {
+      font-size: 25px;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+    .weather_icon > img {
+      width: 8.5em;
+      height: 8.5em;
+    }
+
+    .weather_img {
+      display: flex;
+      justify-content: space-between;
+
+      & div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+          height: 3em;
+          width: 3em;
+          margin-left: 10px;
+        }
+      }
+      & p {
+        width: 100%;
+        margin: 0;
+      }
+      .wind_speed,
+      .humidity {
+        font-size: 20px;
+      }
+    }
+  }
+  /*Finish weather information*/
+}
+
+@media (min-width: 768px) {
+}
