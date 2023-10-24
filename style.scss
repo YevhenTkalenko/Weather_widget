@@ -9,6 +9,7 @@
   .main_section {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
 
     .weather_card {
@@ -74,6 +75,7 @@
     text-align: center;
     margin-bottom: 60px;
     display: none;
+    flex-direction: column;
 
     & h1 {
       font-size: 45px;
@@ -86,6 +88,7 @@
 
     .weather_description {
       font-size: 25px;
+      width: 100%;
 
       &::first-letter {
         text-transform: capitalize;
@@ -98,7 +101,7 @@
 
     .weather_img {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
 
       & div {
         display: flex;
@@ -126,4 +129,30 @@
 }
 
 @media (min-width: 768px) {
+  .weather-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    [class*="weather"] {
+      width: 50%;
+    }
+
+    .weather_description {
+      order: 1;
+      width: 50%;
+    }
+    .weather_city {
+      order: -1;
+    }
+    .weather_img {
+      flex-direction: row;
+    }
+  }
+
+  .serch_section {
+    .search_input {
+      width: 30%;
+    }
+  }
 }
