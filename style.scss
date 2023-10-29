@@ -11,6 +11,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
 
     .weather_card {
       display: flex;
@@ -21,9 +24,10 @@
       color: white;
       background: linear-gradient(
         29deg,
-        rgba(11, 2, 163, 1) 19%,
-        rgba(17, 144, 215, 1) 81%
+        rgba(11, 2, 163, 50%) 19%,
+        rgba(17, 144, 215, 50%) 81%
       );
+      border: 3px solid black;
     }
   }
 
@@ -124,6 +128,9 @@
         font-size: 20px;
       }
     }
+    .weather_min_max {
+      display: none;
+    }
   }
   /*Finish weather information*/
 }
@@ -148,11 +155,32 @@
     .weather_img {
       flex-direction: row;
     }
+    .weather_min_max {
+      display: flex;
+      flex-direction: column;
+      order: 1;
+      font-size: 20px;
+      align-items: center;
+      justify-content: center;
+
+      & div {
+        width: 100%;
+        padding-top: 10px;
+      }
+    }
   }
 
   .serch_section {
     .search_input {
       width: 30%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .main_section {
+    .weather_card {
+      width: 45vw;
     }
   }
 }
