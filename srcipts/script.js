@@ -4,8 +4,6 @@ const inputCityName = document.querySelector('.search_input');
 const searchCityBtn = document.querySelector('.search_btn');
 
 
-
-
 const getFetch = async (city) => {
     let dataFetch = await fetch(`${weatherRef}${city}${appiKey}`);
     return insertWeatherData(dataFetch.json())
@@ -14,10 +12,8 @@ const getFetch = async (city) => {
 
 async function insertWeatherData(cityName) {
     let insertData = await cityName;
-    let weatherCartIcon = document.querySelector('.weather_icon img');
     if (insertData.cod === 200) {
-        console.log(insertData)
-        weatherCartIcon.setAttribute('src', `https://openweathermap.org/img/wn/${insertData.weather[0].icon}@2x.png`);
+        document.querySelector('.weather_icon img').setAttribute('src', `https://openweathermap.org/img/wn/${insertData.weather[0].icon}@2x.png`);
         document.querySelector('.weather_city').innerHTML = `${insertData.name}, ${insertData.sys.country}`;
         document.querySelector('.weather_temp').innerHTML = Math.round(insertData.main.temp) + `&degC`;
         document.querySelector('.weather_description').textContent = insertData.weather[0].description;
@@ -29,21 +25,13 @@ async function insertWeatherData(cityName) {
         document.querySelector('.weather_feels').innerHTML = `feels like = ${insertData.main.feels_like}&degC`;
 
     } else if (insertData.cod !== 200) {
-        document.querySelector('.error_data').style.display = 'block'
+        document.querySelector('.error_data').style.display = 'block';
+        document.querySelector('.weather-info').style.display = 'none';
     }
 
-    setImg(weatherCartIcon);
 }
 
 searchCityBtn.addEventListener("click", () => {
     getFetch(inputCityName.value)
 })
 
-
-function setImg(icon) {
-    let iconAttr = icon.getAttribute('src')
-    console.log(iconAttr)
-    if (iconAttr.includes('01n')) {
-        document.querySelector('.main_section').style.backgroundImage = `url(https://openweathermap.org/img/wn/01n@2x.png)`
-    }
-}
